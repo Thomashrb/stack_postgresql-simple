@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/bbsl/development/haskell/psqlSimpleTest/.stack-work/install/x86_64-linux-ncurses6-nopie/lts-9.2/8.0.2/bin"
-libdir     = "/home/bbsl/development/haskell/psqlSimpleTest/.stack-work/install/x86_64-linux-ncurses6-nopie/lts-9.2/8.0.2/lib/x86_64-linux-ghc-8.0.2/psqlSimpleTest-0.1.0.0-FpN2mdHjm7H2NlyYKO7Ugx"
+libdir     = "/home/bbsl/development/haskell/psqlSimpleTest/.stack-work/install/x86_64-linux-ncurses6-nopie/lts-9.2/8.0.2/lib/x86_64-linux-ghc-8.0.2/psqlSimpleTest-0.1.0.0-3XcZjC3DJFu1T3gR6T23Oi"
 dynlibdir  = "/home/bbsl/development/haskell/psqlSimpleTest/.stack-work/install/x86_64-linux-ncurses6-nopie/lts-9.2/8.0.2/lib/x86_64-linux-ghc-8.0.2"
 datadir    = "/home/bbsl/development/haskell/psqlSimpleTest/.stack-work/install/x86_64-linux-ncurses6-nopie/lts-9.2/8.0.2/share/x86_64-linux-ghc-8.0.2/psqlSimpleTest-0.1.0.0"
 libexecdir = "/home/bbsl/development/haskell/psqlSimpleTest/.stack-work/install/x86_64-linux-ncurses6-nopie/lts-9.2/8.0.2/libexec"

@@ -21,12 +21,40 @@
   (major1) == 0 && (major2) <  2 || \
   (major1) == 0 && (major2) == 2 && (minor) <= 2)
 
+/* package lens-4.15.4 */
+#define VERSION_lens "4.15.4"
+#define MIN_VERSION_lens(major1,major2,minor) (\
+  (major1) <  4 || \
+  (major1) == 4 && (major2) <  15 || \
+  (major1) == 4 && (major2) == 15 && (minor) <= 4)
+
 /* package postgresql-simple-0.5.3.0 */
 #define VERSION_postgresql_simple "0.5.3.0"
 #define MIN_VERSION_postgresql_simple(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  5 || \
   (major1) == 0 && (major2) == 5 && (minor) <= 3)
+
+/* package text-1.2.2.2 */
+#define VERSION_text "1.2.2.2"
+#define MIN_VERSION_text(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  2 || \
+  (major1) == 1 && (major2) == 2 && (minor) <= 2)
+
+/* package time-1.6.0.1 */
+#define VERSION_time "1.6.0.1"
+#define MIN_VERSION_time(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  6 || \
+  (major1) == 1 && (major2) == 6 && (minor) <= 0)
+
+/* package tuple-0.3.0.2 */
+#define VERSION_tuple "0.3.0.2"
+#define MIN_VERSION_tuple(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 0)
 
 /* tool gcc-7.1.1 */
 #define TOOL_VERSION_gcc "7.1.1"
@@ -84,7 +112,7 @@
   (major1) == 2 && (major2) <  28 || \
   (major1) == 2 && (major2) == 28 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "psqlSimpleTest-0.1.0.0-FpN2mdHjm7H2NlyYKO7Ugx"
+#define CURRENT_COMPONENT_ID "psqlSimpleTest-0.1.0.0-3XcZjC3DJFu1T3gR6T23Oi"
 
-#define CURRENT_PACKAGE_KEY "psqlSimpleTest-0.1.0.0-FpN2mdHjm7H2NlyYKO7Ugx"
+#define CURRENT_PACKAGE_KEY "psqlSimpleTest-0.1.0.0-3XcZjC3DJFu1T3gR6T23Oi"
 
