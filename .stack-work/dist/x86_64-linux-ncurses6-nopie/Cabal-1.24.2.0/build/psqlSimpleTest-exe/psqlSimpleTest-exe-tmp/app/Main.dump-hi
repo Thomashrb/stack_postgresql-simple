@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-09-05 10:15:24.034277127 UTC
+2017-09-05 19:24:24.507467028 UTC
 
 interface main@main:Main 8002
-  interface hash: 7e0689bf003eeeb2eb50a42a696700e4
-  ABI hash: 4993d0145d15d891e743eb2b7c86ae74
+  interface hash: 611ee4db9d12158bdbc31ba76155f9ef
+  ABI hash: 6ece9f416ff026daebc69ff3f87c85c0
   export-list hash: 01973464736e5f474fdd88f34c1e1bfa
   orphan hash: e973cb0a17ac1f1642c11a6c1135e07b
   flag hash: 437d26bbba2eaaa26912ecc4f7d1d255
@@ -107,6 +107,7 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-8bUdsjh6UCE83aH
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
 import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
 import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
 import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
 import  -/  base-4.9.1.0:Data.Int 07f5a36c488acfe0ac32e81c7536b8ff
 import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
@@ -127,10 +128,9 @@ import  -/  postgresql-simple-0.5.3.0@postgresql-simple-0.5.3.0-CikGkVyRqLmCtr37
 import  -/  postgresql-simple-0.5.3.0@postgresql-simple-0.5.3.0-CikGkVyRqLmCtr37RZVlln:Database.PostgreSQL.Simple.ToField 1c42301a7cc6028ce12397109ac9d514
 import  -/  postgresql-simple-0.5.3.0@postgresql-simple-0.5.3.0-CikGkVyRqLmCtr37RZVlln:Database.PostgreSQL.Simple.ToRow 2d179280fb21e31d0acc8d3fcd6aa0ab
 import  -/  psqlSimpleTest-0.1.0.0@psqlSimpleTest-0.1.0.0-3XcZjC3DJFu1T3gR6T23Oi:Lib 874ece6aa7612ea8cb1ad8953e4ebdf4
-import  -/  text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text 28074c70d3351fb3368d27c0a438ae07
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock ecc8b7f9ffb2bf483684ff7090f3df6a
 import  -/  tuple-0.3.0.2@tuple-0.3.0.2-fw19c2mVE4S4kTOAA0LW:Data.Tuple.Select 405e4c165e81b4fa47e7a29436c65100
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fFromRowVarcharIntDate ::
     Database.PostgreSQL.Simple.FromRow.FromRow Main.VarcharIntDate
   DFunId
@@ -141,7 +141,7 @@ d193f518102b9920bb938368d0c8e688
                 Main.$fFromRowVarcharIntDate_$cfromRow
                   `cast`
                 (Sym (Database.PostgreSQL.Simple.FromRow.N:FromRow[0]) <Main.VarcharIntDate>_N) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fFromRowVarcharIntDate1 ::
     Database.PostgreSQL.Simple.Internal.Row
     -> Database.PostgreSQL.LibPQ.Column
@@ -154,20 +154,20 @@ d193f518102b9920bb938368d0c8e688
      Strictness: <S(SS(SL)),1*U(U,U(U,U))><S(S),1*U(U)><L,U(U,U,U)><S,U>,
      Inline: INLINE[0],
      Unfolding: InlineRule (4, True, False)
-                (\ (w3 :: Database.PostgreSQL.Simple.Internal.Row)
-                   (w4 :: Database.PostgreSQL.LibPQ.Column)
-                   (w5 :: Database.PostgreSQL.Simple.Internal.Connection)
-                   (w6 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case w3 of ww { Database.PostgreSQL.Simple.Internal.Row ww1 ww2 ->
+                (\ (w4 :: Database.PostgreSQL.Simple.Internal.Row)
+                   (w5 :: Database.PostgreSQL.LibPQ.Column)
+                   (w6 :: Database.PostgreSQL.Simple.Internal.Connection)
+                   (w7 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w4 of ww { Database.PostgreSQL.Simple.Internal.Row ww1 ww2 ->
                  case ww2
                         `cast`
                       (Database.PostgreSQL.LibPQ.N:Result[0]) of ww3 { GHC.ForeignPtr.ForeignPtr ww4 ww5 ->
-                 case w4
+                 case w5
                         `cast`
                       (Trans
                            (Database.PostgreSQL.LibPQ.N:Column[0])
                            (Foreign.C.Types.N:CInt[0])) of ww6 { GHC.Int.I32# ww7 ->
-                 Main.$w$cfromRow ww1 ww4 ww5 ww7 w5 w6 } } }) -}
+                 Main.$w$cfromRow ww1 ww4 ww5 ww7 w6 w7 } } }) -}
 1746a3db3400044ff53ec8efad3fcda2
   $fFromRowVarcharIntDate2 ::
     Database.PostgreSQL.Simple.Internal.Field
@@ -290,7 +290,7 @@ d193f518102b9920bb938368d0c8e688
                                              (GHC.Base.Maybe [GHC.Types.Char])>_R))
                            (Sym (Database.PostgreSQL.Simple.Internal.N:Conversion[0]
                                      <GHC.Base.Maybe [GHC.Types.Char]>_R))) }) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fFromRowVarcharIntDate_$cfromRow ::
     Database.PostgreSQL.Simple.Internal.RowParser Main.VarcharIntDate
   {- Arity: 4,
@@ -324,7 +324,7 @@ d193f518102b9920bb938368d0c8e688
                                        Database.PostgreSQL.Simple.Internal.Conversion>_R
                                     <Main.VarcharIntDate>_N))
                           (Sym (Database.PostgreSQL.Simple.Internal.N:RowParser[0]) <Main.VarcharIntDate>_N))) -}
-16f6bc220e15b1abdcf69ec2211a4434
+7453b7596b918ff0416141b67933db4c
   $fShowVarcharInt :: GHC.Show.Show Main.VarcharInt
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -333,11 +333,11 @@ d193f518102b9920bb938368d0c8e688
                   Main.$fShowVarcharInt_$cshowsPrec
                   Main.$fShowVarcharInt_$cshow
                   Main.$fShowVarcharInt_$cshowList -}
-16f6bc220e15b1abdcf69ec2211a4434
+7453b7596b918ff0416141b67933db4c
   $fShowVarcharInt1 :: Main.VarcharInt -> GHC.Show.ShowS
   {- Arity: 1,
-     Unfolding: (\ (w3 :: Main.VarcharInt) ->
-                 case w3 of ww { Main.VarcharInt ww1 ww2 ->
+     Unfolding: (\ (w4 :: Main.VarcharInt) ->
+                 case w4 of ww { Main.VarcharInt ww1 ww2 ->
                  Main.$w$cshowsPrec 0# ww1 ww2 }) -}
 dc11275f45af07926a1a85481145b4d2
   $fShowVarcharInt2 :: [GHC.Types.Char]
@@ -357,7 +357,7 @@ dc11275f45af07926a1a85481145b4d2
 652260db1667b0a0710545682c5d4f5d
   $fShowVarcharInt7 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fShowVarcharIntDate :: GHC.Show.Show Main.VarcharIntDate
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -366,11 +366,11 @@ d193f518102b9920bb938368d0c8e688
                   Main.$fShowVarcharIntDate_$cshowsPrec
                   Main.$fShowVarcharIntDate_$cshow
                   Main.$fShowVarcharIntDate_$cshowList -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fShowVarcharIntDate1 :: Main.VarcharIntDate -> GHC.Show.ShowS
   {- Arity: 1,
-     Unfolding: (\ (w3 :: Main.VarcharIntDate) ->
-                 case w3 of ww { Main.VarcharIntDate ww1 ww2 ww3 ->
+     Unfolding: (\ (w4 :: Main.VarcharIntDate) ->
+                 case w4 of ww { Main.VarcharIntDate ww1 ww2 ww3 ->
                  Main.$w$cshowsPrec1 0# ww1 ww2 ww3 }) -}
 6c6591aaf9b6ac8b4c713b5e7eb4031b
   $fShowVarcharIntDate2 :: [GHC.Types.Char]
@@ -384,7 +384,7 @@ d193f518102b9920bb938368d0c8e688
 2bbb4526366ab8311bd48723a89a2e0f
   $fShowVarcharIntDate5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "VarcharIntDate {"#) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fShowVarcharIntDate_$cshow ::
     Main.VarcharIntDate -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U)>,
@@ -394,22 +394,22 @@ d193f518102b9920bb938368d0c8e688
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fShowVarcharIntDate_$cshowList ::
     [Main.VarcharIntDate] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ Main.VarcharIntDate
                    Main.$fShowVarcharIntDate1) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fShowVarcharIntDate_$cshowsPrec ::
     GHC.Types.Int -> Main.VarcharIntDate -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U,1*U)>,
      Inline: INLINE[0],
      Unfolding: InlineRule (2, True, False)
-                (\ (w3 :: GHC.Types.Int) (w4 :: Main.VarcharIntDate) ->
-                 case w3 of ww { GHC.Types.I# ww1 ->
-                 case w4 of ww2 { Main.VarcharIntDate ww3 ww4 ww5 ->
+                (\ (w4 :: GHC.Types.Int) (w5 :: Main.VarcharIntDate) ->
+                 case w4 of ww { GHC.Types.I# ww1 ->
+                 case w5 of ww2 { Main.VarcharIntDate ww3 ww4 ww5 ->
                  Main.$w$cshowsPrec1 ww1 ww3 ww4 ww5 } }) -}
 25a1fdc87a326250ded8a90d014f22fb
   $fShowVarcharIntDate_$s$fShowUnbounded ::
@@ -459,7 +459,7 @@ fcd5363ee4f41efb4def7871bf47a8fa
                       GHC.Show.shows22)
                    ls
                    s) -}
-16f6bc220e15b1abdcf69ec2211a4434
+7453b7596b918ff0416141b67933db4c
   $fShowVarcharInt_$cshow :: Main.VarcharInt -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -468,23 +468,23 @@ fcd5363ee4f41efb4def7871bf47a8fa
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-16f6bc220e15b1abdcf69ec2211a4434
+7453b7596b918ff0416141b67933db4c
   $fShowVarcharInt_$cshowList :: [Main.VarcharInt] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ Main.VarcharInt
                    Main.$fShowVarcharInt1) -}
-16f6bc220e15b1abdcf69ec2211a4434
+7453b7596b918ff0416141b67933db4c
   $fShowVarcharInt_$cshowsPrec ::
     GHC.Types.Int -> Main.VarcharInt -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)>,
      Inline: INLINE[0],
      Unfolding: InlineRule (2, True, False)
-                (\ (w3 :: GHC.Types.Int) (w4 :: Main.VarcharInt) ->
-                 case w3 of ww { GHC.Types.I# ww1 ->
-                 case w4 of ww2 { Main.VarcharInt ww3 ww4 ->
+                (\ (w4 :: GHC.Types.Int) (w5 :: Main.VarcharInt) ->
+                 case w4 of ww { GHC.Types.I# ww1 ->
+                 case w5 of ww2 { Main.VarcharInt ww3 ww4 ->
                  Main.$w$cshowsPrec ww1 ww3 ww4 } }) -}
-16f6bc220e15b1abdcf69ec2211a4434
+7453b7596b918ff0416141b67933db4c
   $fToRowVarcharInt ::
     Database.PostgreSQL.Simple.ToRow.ToRow Main.VarcharInt
   DFunId
@@ -495,7 +495,7 @@ fcd5363ee4f41efb4def7871bf47a8fa
                   `cast`
                 (Sym (Database.PostgreSQL.Simple.ToRow.N:ToRow[0]
                           <Main.VarcharInt>_N)) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fToRowVarcharIntDate ::
     Database.PostgreSQL.Simple.ToRow.ToRow Main.VarcharIntDate
   DFunId
@@ -506,24 +506,24 @@ d193f518102b9920bb938368d0c8e688
                   `cast`
                 (Sym (Database.PostgreSQL.Simple.ToRow.N:ToRow[0]
                           <Main.VarcharIntDate>_N)) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $fToRowVarcharIntDate_$ctoRow ::
     Main.VarcharIntDate -> [Database.PostgreSQL.Simple.ToField.Action]
   {- Arity: 1, Strictness: <L,U(1*U,1*U,1*U)>m2, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, False)
-                (\ (w3 :: Main.VarcharIntDate) ->
-                 case Main.$w$ctoRow1 w3 of ww { (#,#) ww1 ww2 ->
+                (\ (w4 :: Main.VarcharIntDate) ->
+                 case Main.$w$ctoRow1 w4 of ww { (#,#) ww1 ww2 ->
                  GHC.Types.:
                    @ Database.PostgreSQL.Simple.ToField.Action
                    ww1
                    ww2 }) -}
-16f6bc220e15b1abdcf69ec2211a4434
+7453b7596b918ff0416141b67933db4c
   $fToRowVarcharInt_$ctoRow ::
     Main.VarcharInt -> [Database.PostgreSQL.Simple.ToField.Action]
   {- Arity: 1, Strictness: <L,U(1*U,1*U)>m2, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, False)
-                (\ (w3 :: Main.VarcharInt) ->
-                 case Main.$w$ctoRow w3 of ww { (#,#) ww1 ww2 ->
+                (\ (w4 :: Main.VarcharInt) ->
+                 case Main.$w$ctoRow w4 of ww { (#,#) ww1 ww2 ->
                  GHC.Types.:
                    @ Database.PostgreSQL.Simple.ToField.Action
                    ww1
@@ -588,7 +588,7 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $w$cfromRow ::
     GHC.Prim.Int#
     -> GHC.Prim.Addr#
@@ -605,8 +605,8 @@ d193f518102b9920bb938368d0c8e688
                    (ww1 :: GHC.Prim.Addr#)
                    (ww2 :: GHC.ForeignPtr.ForeignPtrContents)
                    (ww3 :: GHC.Prim.Int#)
-                   (w3 :: Database.PostgreSQL.Simple.Internal.Connection)
-                   (w4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                   (w4 :: Database.PostgreSQL.Simple.Internal.Connection)
+                   (w5 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case Database.PostgreSQL.Simple.FromRow.$wfieldWith
                         @ (GHC.Base.Maybe GHC.Base.String)
                         Main.$fFromRowVarcharIntDate4
@@ -614,8 +614,8 @@ d193f518102b9920bb938368d0c8e688
                         ww1
                         ww2
                         ww3
-                        w3
-                        w4 of ds { (#,#) ipv ipv1 ->
+                        w4
+                        w5 of ds { (#,#) ipv ipv1 ->
                  let {
                    $j :: GHC.Prim.State# GHC.Prim.RealWorld
                          -> Database.PostgreSQL.Simple.Ok.Ok
@@ -653,7 +653,7 @@ d193f518102b9920bb938368d0c8e688
                                  ww1
                                  ww2
                                  ww7
-                                 w3
+                                 w4
                                  ipv2 of ds1 { (#,#) ipv4 ipv5 ->
                           case ipv5 of wild2 {
                             Database.PostgreSQL.Simple.Ok.Errors err
@@ -692,7 +692,7 @@ d193f518102b9920bb938368d0c8e688
                              ww1
                              ww2
                              ww7
-                             w3
+                             w4
                              ipv of ds1 { (#,#) ipv2 ipv3 ->
                       case ipv3 of wild2 {
                         Database.PostgreSQL.Simple.Ok.Errors err
@@ -844,14 +844,14 @@ d193f518102b9920bb938368d0c8e688
                         @ GHC.Types.Char
                         GHC.Show.shows7
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x)) }) -}
-16f6bc220e15b1abdcf69ec2211a4434
+7453b7596b918ff0416141b67933db4c
   $w$ctoRow ::
     Main.VarcharInt
     -> (# Database.PostgreSQL.Simple.ToField.Action,
           [Database.PostgreSQL.Simple.ToField.Action] #)
   {- Arity: 1, Strictness: <L,U(1*U,1*U)>, Inline: [0],
-     Unfolding: (\ (w3 :: Main.VarcharInt) ->
-                 (# case w3 of wild { Main.VarcharInt ds ds1 ->
+     Unfolding: (\ (w4 :: Main.VarcharInt) ->
+                 (# case w4 of wild { Main.VarcharInt ds ds1 ->
                     case ds of wild1 {
                       GHC.Base.Nothing -> Database.PostgreSQL.Simple.ToField.renderNull
                       GHC.Base.Just a1
@@ -864,7 +864,7 @@ d193f518102b9920bb938368d0c8e688
                                     a1))) } },
                     GHC.Types.:
                       @ Database.PostgreSQL.Simple.ToField.Action
-                      (case w3 of wild { Main.VarcharInt ds ds1 ->
+                      (case w4 of wild { Main.VarcharInt ds ds1 ->
                        case ds1 of wild1 {
                          GHC.Base.Nothing -> Database.PostgreSQL.Simple.ToField.renderNull
                          GHC.Base.Just a1
@@ -874,14 +874,14 @@ d193f518102b9920bb938368d0c8e688
                                  Data.ByteString.Builder.Prim.ASCII.intDec
                                  a1) } })
                       (GHC.Types.[] @ Database.PostgreSQL.Simple.ToField.Action) #)) -}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   $w$ctoRow1 ::
     Main.VarcharIntDate
     -> (# Database.PostgreSQL.Simple.ToField.Action,
           [Database.PostgreSQL.Simple.ToField.Action] #)
   {- Arity: 1, Strictness: <L,U(1*U,1*U,1*U)>, Inline: [0],
-     Unfolding: (\ (w3 :: Main.VarcharIntDate) ->
-                 (# case w3 of wild { Main.VarcharIntDate ds ds1 ds2 ->
+     Unfolding: (\ (w4 :: Main.VarcharIntDate) ->
+                 (# case w4 of wild { Main.VarcharIntDate ds ds1 ds2 ->
                     case ds of wild1 {
                       GHC.Base.Nothing -> Database.PostgreSQL.Simple.ToField.renderNull
                       GHC.Base.Just a1
@@ -894,7 +894,7 @@ d193f518102b9920bb938368d0c8e688
                                     a1))) } },
                     GHC.Types.:
                       @ Database.PostgreSQL.Simple.ToField.Action
-                      (case w3 of wild { Main.VarcharIntDate ds ds1 ds2 ->
+                      (case w4 of wild { Main.VarcharIntDate ds ds1 ds2 ->
                        case ds1 of wild1 {
                          GHC.Base.Nothing -> Database.PostgreSQL.Simple.ToField.renderNull
                          GHC.Base.Just a1
@@ -905,7 +905,7 @@ d193f518102b9920bb938368d0c8e688
                                  a1) } })
                       (GHC.Types.:
                          @ Database.PostgreSQL.Simple.ToField.Action
-                         (case w3 of wild { Main.VarcharIntDate ds ds1 ds2 ->
+                         (case w4 of wild { Main.VarcharIntDate ds ds1 ds2 ->
                           case ds2 of wild1 {
                             GHC.Base.Nothing -> Database.PostgreSQL.Simple.ToField.renderNull
                             GHC.Base.Just a1
@@ -916,7 +916,7 @@ d193f518102b9920bb938368d0c8e688
                                     (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                                   case eta1 of ww { Data.ByteString.Builder.Internal.BufferRange ww1 ww2 ->
                                   let {
-                                    w4 :: Data.ByteString.Builder.Internal.BufferRange
+                                    w5 :: Data.ByteString.Builder.Internal.BufferRange
                                           -> GHC.Prim.State# GHC.Prim.RealWorld
                                           -> (# GHC.Prim.State# GHC.Prim.RealWorld,
                                                 Data.ByteString.Builder.Internal.BuildSignal r #)
@@ -936,7 +936,7 @@ d193f518102b9920bb938368d0c8e688
                                        Database.PostgreSQL.Simple.Time.Implementation.$wdateToBuilder
                                          a1
                                          @ r
-                                         w4
+                                         w5
                                            `cast`
                                          (<Data.ByteString.Builder.Internal.BufferRange>_R
                                           ->_R Sym (GHC.Types.N:IO[0]
@@ -964,7 +964,7 @@ d193f518102b9920bb938368d0c8e688
                                              Database.PostgreSQL.Simple.Time.Implementation.$wdateToBuilder
                                                a1
                                                @ r
-                                               w4
+                                               w5
                                                  `cast`
                                                (<Data.ByteString.Builder.Internal.BufferRange>_R
                                                 ->_R Sym (GHC.Types.N:IO[0]
@@ -988,17 +988,17 @@ d193f518102b9920bb938368d0c8e688
                                                         r>_R))
                                       (Sym (Data.ByteString.Builder.Internal.N:Builder[0]))) } })
                          (GHC.Types.[] @ Database.PostgreSQL.Simple.ToField.Action)) #)) -}
-16f6bc220e15b1abdcf69ec2211a4434
+7453b7596b918ff0416141b67933db4c
   data VarcharInt
     = VarcharInt {avc :: GHC.Base.Maybe GHC.Base.String,
                   ai :: GHC.Base.Maybe GHC.Types.Int}
-d193f518102b9920bb938368d0c8e688
+719fe0303c7cdbfc069be9fb180376b7
   data VarcharIntDate
     = VarcharIntDate {vc :: GHC.Base.Maybe GHC.Base.String,
                       i :: GHC.Base.Maybe GHC.Types.Int,
                       d :: GHC.Base.Maybe
                              Database.PostgreSQL.Simple.Time.Implementation.Date}
-e844f1bd25a1f515c7821dd064705b83
+dd27da213d204ce27376a9b1c1d4bc4f
   addVarcharInt ::
     Database.PostgreSQL.Simple.Internal.Connection
     -> Main.VarcharInt -> GHC.Types.IO GHC.Int.Int64
@@ -1009,7 +1009,7 @@ e844f1bd25a1f515c7821dd064705b83
                 (<Database.PostgreSQL.Simple.Internal.Connection>_R
                  ->_R <Main.VarcharInt>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Int.Int64>_R)) -}
-a1fb6170138b00e3192c2e3395d1051e
+fc106c924ade7cc7013cd85e55208cef
   addVarcharInt1 ::
     Database.PostgreSQL.Simple.Internal.Connection
     -> Main.VarcharInt
@@ -1032,11 +1032,11 @@ a1fb6170138b00e3192c2e3395d1051e
                    (Sym (Database.PostgreSQL.Simple.Types.N:Query[0]))
                    vci
                    eta) -}
-5ffb4fdd6fe5816cddcf69bb21af7407
+064f5b4c412eceb6e27744b3266f83da
   addVarcharInt2 :: Data.ByteString.Internal.ByteString
   {- Unfolding: (Data.ByteString.Lazy.toStrict
                    Main.addVarcharInt3) -}
-ad5bb3683eab4a639a7d57eba8059284
+9697b489fe655b972054345b2109ef21
   addVarcharInt3 :: Data.ByteString.Lazy.Internal.ByteString
   {- Unfolding: (Data.ByteString.Builder.toLazyByteString
                    Main.addVarcharInt4
@@ -1049,7 +1049,7 @@ ad5bb3683eab4a639a7d57eba8059284
                          ->_R Sym (GHC.Types.N:IO[0]
                                        <Data.ByteString.Builder.Internal.BuildSignal r>_R))
                         (Sym (Data.ByteString.Builder.Internal.N:Builder[0])))) -}
-1e5c5b728c0e7275996cd7655c13675d
+b96f7202f73b2f0b33b23cf21e6c9aa4
   addVarcharInt4 ::
     (Data.ByteString.Builder.Internal.BufferRange
      -> GHC.Types.IO (Data.ByteString.Builder.Internal.BuildSignal r))
@@ -1059,12 +1059,12 @@ ad5bb3683eab4a639a7d57eba8059284
           Data.ByteString.Builder.Internal.BuildSignal r #)
   {- Arity: 3,
      Unfolding: (\ @ r
-                   (w3 :: Data.ByteString.Builder.Internal.BufferRange
+                   (w4 :: Data.ByteString.Builder.Internal.BufferRange
                           -> GHC.Types.IO (Data.ByteString.Builder.Internal.BuildSignal r))
-                   (w4 :: Data.ByteString.Builder.Internal.BufferRange)
-                   (w5 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case w4 of ww { Data.ByteString.Builder.Internal.BufferRange ww1 ww2 ->
-                 Main.addVarcharInt6 @ r Main.addVarcharInt5 w3 ww1 ww2 w5 }) -}
+                   (w5 :: Data.ByteString.Builder.Internal.BufferRange)
+                   (w6 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w5 of ww { Data.ByteString.Builder.Internal.BufferRange ww1 ww2 ->
+                 Main.addVarcharInt6 @ r Main.addVarcharInt5 w4 ww1 ww2 w6 }) -}
 c5a7b76fb5485d512674f94fa87cafe8
   addVarcharInt5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
@@ -1081,21 +1081,21 @@ eef411b51dae80e831cb228e2355f261
           Data.ByteString.Builder.Internal.BuildSignal r #)
   {- Arity: 5, HasNoCafRefs,
      Strictness: <S,1*U><L,C(C1(U(U,U)))><S,U><L,U><S,U>, Inline: [0] -}
-ce7b34027052193ddaf8fcc9a46a4abb
+4fc4c98e0f0286161f06cb92c8fcb2e8
   ai :: Main.VarcharInt -> GHC.Base.Maybe GHC.Types.Int
   RecSel Left Main.VarcharInt
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Main.VarcharInt) ->
                  case ds of wild { Main.VarcharInt ds1 ds2 -> ds2 }) -}
-2067b8b403709467204df37fdcc1bd0c
+bab24eeddd103fae9f2534f4b3c3aef0
   avc :: Main.VarcharInt -> GHC.Base.Maybe GHC.Base.String
   RecSel Left Main.VarcharInt
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Main.VarcharInt) ->
                  case ds of wild { Main.VarcharInt ds1 ds2 -> ds1 }) -}
-6437fed560c7be5e598a9b38e7842dfb
+62b04c59098d5951f719ab2302db8bf2
   d ::
     Main.VarcharIntDate
     -> GHC.Base.Maybe
@@ -1105,7 +1105,7 @@ ce7b34027052193ddaf8fcc9a46a4abb
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Main.VarcharIntDate) ->
                  case ds of wild { Main.VarcharIntDate ds1 ds2 ds3 -> ds3 }) -}
-e84c65efd94240232f946166e1a79f5c
+bd69ed50e5cadeb2683232e90ed77cfa
   i :: Main.VarcharIntDate -> GHC.Base.Maybe GHC.Types.Int
   RecSel Left Main.VarcharIntDate
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
@@ -1130,7 +1130,7 @@ d9c0dee8a685c5ed422401aaa63f23bf
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
-8761368e4dbc46b71737857138d11a22
+f4a279271af0c6238d4e549f77516f9a
   vc :: Main.VarcharIntDate -> GHC.Base.Maybe GHC.Base.String
   RecSel Left Main.VarcharIntDate
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,

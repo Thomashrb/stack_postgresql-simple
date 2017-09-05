@@ -3,7 +3,7 @@ module Main where
 
 import Data.Int(Int64)
 import Data.Dates
-import Data.Text as Text
+-- import Data.Text as Text
 import Data.Tuple.Select as Tuple
 import Database.PostgreSQL.Simple
 import Database.PostgreSQL.Simple.ToRow
@@ -60,6 +60,10 @@ main = do
   print (mapM d  res)
 
   execute conn "insert into varintdate (vc, i, d) values (?, ?, ?)" $ VarcharIntDate (vc (res!!0)) (i (res!!0)) (d (res!!0))
+
+  mapM_ print =<< ( query_ conn "select vc,i,d from varintdate" :: IO [VarcharIntDate] )
+
+  print (length res)
 
 
 --  let a = "abc"
