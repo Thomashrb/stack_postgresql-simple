@@ -34,11 +34,11 @@ instance FromRow VarcharIntDate where
 instance ToRow VarcharInt where
   toRow c = [toField (avc c), toField (ai c)]
 
---instance ToRow VarcharIntDate where
-  --toRow c = [toField (vc c), toField (i c), toField (d c)]
+instance ToRow VarcharIntDate where
+  toRow c = [toField (vc c), toField (i c), toField (d c)]
 
 addVarcharInt :: Connection -> VarcharInt -> IO Int64
-addVarcharInt c i = execute c "INSERT INTO varintdate (vc,i) VALUES (?,?)" i
+addVarcharInt c vci = execute c "INSERT INTO varintdate (vc,i) VALUES (?,?)" vci
 
 -- addVarcharIntDate :: Connection -> VarcharIntDate -> IO Int64
 -- addVarcharIntDate c varcharintdate = execute c "INSERT INTO varintdate (vc,i,d) VALUES (?,?,?)" varcharintdate
@@ -59,6 +59,7 @@ main = do
   print (d (res!!0)) -- print d of the 0-th row
   print (mapM d  res)
 
+  execute conn "insert into varintdate (vc, i, d) values (?, ?, ?)" $ VarcharIntDate (vc (res!!0)) (i (res!!0)) (d (res!!0))
 
 
 --  let a = "abc"
